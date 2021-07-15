@@ -7,50 +7,23 @@
     <title>Retail Page</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<div id="products">
-    <div class="productContainer">
-        <div class="productData">
-   
-            <img src="./images/AbsolutVodka.png" class="productImage" alt="image of Absolut Vodka">
+<div id="products"></div>
 
-            <div class = "productInfo">
-                <div class = "productName">
-                    <h1>Awesome Sauce</h1>
-                    <h2>Produced by Team Saucesome</h2>
-                    <h1 bolder>$49.29</h1>
-                    <!-- awesome sauce (black) box --> 
-                </div>
-                <br>
-                <div class = "cartDescription">
-                    <div class = "buttons">
-                        <button class = "reviewButton" onclick = "document.getElementById('reviewDetail').scrollIntoView();">Reviews</button>
-                        <br>
-                        <button class = "addToCartButton" onclick = "addToCart()";>Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class = "productReviews">
-            <h1>Customer Reviews:</h1>
-            <p class="review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, unde. Quia, dolorum. Qui nobis repellendus blanditiis ex totam inventore maxime. Sed corporis enim similique reprehenderit modi maiores mollitia, minus iste.</p>
-            <p class="review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel delectus nihil tenetur. Voluptas vitae sed, mollitia voluptatibus iusto quod tempore expedita commodi harum ea fugit, repellendus laboriosam amet! Natus, libero!</p>
-        </div>
 
+<!--Cart Modal-->
+<section class = "addToCart">
+    <div class = "modal" id = "modal">
+        <div class = "modal-content">
+            <span id = "close" onclick="closeModal()">Click to Dismiss</span>
+            <h2>Cart Contents:</h2>
+            <img src="" alt="">
+            <p id = "prodName">Product Name:</p>
+            <p id = "prodPrice">Product Price:</p>
+            <p id = "cartQuantity">Quantity:</p>
+            <p id = "totalPrice">Total Price:</p>
+        </div>
     </div>
-    <!--Cart Modal-->
-    <section class = "addToCart">
-        <div class = "modal" id = "modal">
-            <div class = "modal-content">
-                <span id = "close" onclick="closeModal()">Click to Dismiss</span>
-                <h2>Cart Contents:</h2>
-                <img src="" alt="">
-                <p id = "prodName">Product Name:</p>
-                <p id = "prodPrice">Product Price:</p>
-                <p id = "cartQuantity">Quantity:</p>
-                <p id = "totalPrice">Total Price:</p>
-            </div>
-        </div>
-    </section>
+</section>
 </body>
 <script src="./script.js"></script>
 </html>

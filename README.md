@@ -7,3 +7,7 @@
 3. Wrap product data in a div so it is separate from reviews
 4. Clean up styling so the one product looks all aligned
 5. Update all ids to classes so the styles can be applied to like items when we repeat this for all other products using JS
+
+## Refactor 2
+
+1. Remove the product container from the HTML document and create it in JS, then insert it into the products div;
