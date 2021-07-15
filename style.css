@@ -1,41 +1,39 @@
 #container1 {
-    border: 5px solid yellow;
+    /* border: 5px solid yellow; */
     display: flex;
-    background-color: lightgoldenrodyellow;
+    /* background-color: lightgoldenrodyellow; */
     width: 96%;
     padding:2%;
 }
 #container2 {
-    border: 5px solid orange;
+    /* border: 5px solid orange; */
     display: flex;
-    background-color: lightgoldenrodyellow;
+    /* background-color: lightgoldenrodyellow; */
     width: 98%;
     padding:1%;
 }
 
+#container3 {
+    /* border: 5px solid orange; */
+    display: flexbox;
+    align-items: center;
+    margin-left: auto;
+    /* background-color: lightgoldenrodyellow; */
+    width: 53%;
+    /* padding:1%; */
+    margin-bottom: 5%;
+}
+
+body {
+    background-color: lightgray;
+}
 h1 {
     color:Black;
 }
 
-p{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20pt;
-    color: black;
-    background-color: beige;
-}
-
-
-#productDetail {
-
-}
-
-#reviewDetail {
-
-}
-
 .productImage {
-    border: 3px solid blue;
-    background-color: rgb(249, 251, 252);
+    /* border: 3px solid blue; */
+    /* background-color: rgb(249, 251, 252); */
     display: flex;
     justify-content: center;
     padding: 20px;
@@ -50,27 +48,57 @@ p{
 }
 
 .productInfo {
-    border: 3px solid green;
-    background-color: rgb(232, 252, 232);
+    /* border: 3px solid green; */
+    /* background-color: rgb(232, 252, 232); */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
     padding: 20px;
     width: 60%;
 }
 
-#productName {
-    border: 3px solid;
-    background-color: rgb(245, 252, 243);
+#shoppingCart {
+    width: 1px;
+    height: 1px;
+    display: flex
+}
+
+
+#productDescription {
+    /* border: 3px solid; */
+    /* background-color: rgb(245, 252, 243); */
     display: flex;
     flex-direction: column;
     padding: 20px;
     width: 60%;
+} 
+
+.productTitle {
+    color:black;
+    font-size: 30pt;
 }
+
+/* #productTitle {} */
+
+.productMfr {
+    color: black;
+    font-size: 20pt;
+}
+
+/* #productMfr {} */
+
+.productPrice {
+    color: blue;
+    font-weight: bolder;
+    font-size: 28pt;
+}
+
+/* #productPrice {} */
+
 #cartDescription {
-    border: 3px solid;
-    background-color: rgb(245, 252, 243);
+    /* border: 3px solid; */
+    background-color: lightgray;
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -83,18 +111,17 @@ p{
     transition-duration: 0.4s;
 }
 
-
 #button1 {
     font-size: 20pt;
     /* align-items: left; */
     padding: 5%;
-    border: 2px solid orangered;
+    border: 2px solid blue;
     color: black;
-    background-color: slategrey;    
+    background-color: rgb(137, 137, 202);    
 }
 
 #button1:hover {
-    background-color: orangered;
+    background-color: blue;
     color:white;
 }
 
@@ -102,13 +129,13 @@ p{
     font-size: 20pt;
     /* align-items: right;*/
     padding: 12px 28px;
-    border: 2px solid orangered;
+    border: 2px solid blue;
     color: black;
-    background-color: slategrey;    
+    background-color: rgb(137, 137, 202);    
 }
 
 #button2:hover {
-    background-color: orangered;
+    background-color: blue;
     color:white;
 }
 
@@ -123,28 +150,104 @@ p{
 }
 
 .modal-content {
+    border: 1px solid black;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     margin: 20% auto;
     margin-left: 20%;
-    background-color: cadetblue;
+    background-color: beige;
 }
 #close {
     font-size: x-large;
     font-weight: bolder;
 }
 
-#prodName {
-    background-color: cadetblue;
+/* #reviewDetail {} */
+
+#reviewOne {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20pt;
+    color: black;
+    /* background-color: beige; */
+    
 }
-#prodPrice {
-    background-color: cadetblue;
+
+#reviewTwo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20pt;
+    color: black;
+    /* background-color: beige; */
 }
-#cartQuantity {
-    background-color: cadetblue;
-}
-#totalPrice {
-    background-color: cadetblue;
-}
+
+
+.pageSimilarItems {
+    background: #E2E1E0;
+    text-align: center;
+  }
+  .card {
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    height: 300px;
+    margin: 1rem;
+    position: relative;
+    width: 300px;
+  }
+  .card-1 {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+  .card-1:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  .card-2 {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+  .card-2:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  .card-3 {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+  .card-3:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  .card-4 {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+  .card-4:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  .card-5 {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+  .card-5:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  .card-6 {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+  .card-6:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  .card-7 {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+  .card-7:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  .card-8 {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+  .card-8:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
