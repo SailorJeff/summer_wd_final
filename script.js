@@ -14,5 +14,6 @@ function closeModal() {
 
 function addToCart() {
     console.log("This has been clicked as well");
+    openModal()
     var modal = document.getElementById('modal');
 }

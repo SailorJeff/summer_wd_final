@@ -7,38 +7,35 @@
     <title>Retail Page</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<div>
-    <div id = "container1">
-        <div class = "productImage" id = "productPhoto">
-            <div class = "mainImage">
-                <img src="./images/AbsolutVodka.png" alt="image of Absolut Vodka">
-            </div>
-        </div>
-        <div class = "productInfo" id = "productDetails">
-            <div id = "productName">
-                <h1>Awesome Sauce</h1>
-                <h2>Produced by Team Saucesome</h2>
-                <h1 bolder>$49.29</h1>
-                <!-- awesome sauce (black) box --> 
-            </div>
-            <br>
-            <div id = "cartDescription">
-                <div class = "buttons">
-                    <button id = "button1" onclick = "document.getElementById('reviewDetail').scrollIntoView();">Review/Comments</button>
-                    <br>
-                    <button id = "button2" onclick = "openModal()"; onclick = "addToCart()";>Add to Cart</button>
-                    <!-- comments and cart (red) box --> 
+<div id="products">
+    <div class="productContainer">
+        <div class="productData">
+   
+            <img src="./images/AbsolutVodka.png" class="productImage" alt="image of Absolut Vodka">
+
+            <div class = "productInfo">
+                <div class = "productName">
+                    <h1>Awesome Sauce</h1>
+                    <h2>Produced by Team Saucesome</h2>
+                    <h1 bolder>$49.29</h1>
+                    <!-- awesome sauce (black) box --> 
+                </div>
+                <br>
+                <div class = "cartDescription">
+                    <div class = "buttons">
+                        <button class = "reviewButton" onclick = "document.getElementById('reviewDetail').scrollIntoView();">Reviews</button>
+                        <br>
+                        <button class = "addToCartButton" onclick = "addToCart()";>Add to Cart</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div id = "container2">
-        <div class = "reviewContainer" id = "reviewDetail">
+        <div class = "productReviews">
             <h1>Customer Reviews:</h1>
-                <p id = "reviewOne">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, unde. Quia, dolorum. Qui nobis repellendus blanditiis ex totam inventore maxime. Sed corporis enim similique reprehenderit modi maiores mollitia, minus iste.</p>
-                <br>
-                <p id = "reviewTwo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel delectus nihil tenetur. Voluptas vitae sed, mollitia voluptatibus iusto quod tempore expedita commodi harum ea fugit, repellendus laboriosam amet! Natus, libero!</p>
+            <p class="review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, unde. Quia, dolorum. Qui nobis repellendus blanditiis ex totam inventore maxime. Sed corporis enim similique reprehenderit modi maiores mollitia, minus iste.</p>
+            <p class="review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel delectus nihil tenetur. Voluptas vitae sed, mollitia voluptatibus iusto quod tempore expedita commodi harum ea fugit, repellendus laboriosam amet! Natus, libero!</p>
         </div>
+
     </div>
     <!--Cart Modal-->
     <section class = "addToCart">
@@ -46,14 +43,12 @@
             <div class = "modal-content">
                 <span id = "close" onclick="closeModal()">Click to Dismiss</span>
                 <h2>Cart Contents:</h2>
-                    <img src="" alt="">
-                    <p id = "prodName">Product Name:</p>
-                    <p id = "prodPrice">Product Price:</p>
-                    <p id = "cartQuantity">Quantity:</p>
-                    <p id = "totalPrice">Total Price:</p>
-
+                <img src="" alt="">
+                <p id = "prodName">Product Name:</p>
+                <p id = "prodPrice">Product Price:</p>
+                <p id = "cartQuantity">Quantity:</p>
+                <p id = "totalPrice">Total Price:</p>
             </div>
-
         </div>
     </section>
 </body>

@@ -1,16 +1,25 @@
-#container1 {
+.productContainer {
     border: 5px solid yellow;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: lightgoldenrodyellow;
-    width: 96%;
+    width: 50%;
     padding:2%;
+    margin: auto;
 }
-#container2 {
+.productReviews {
     border: 5px solid orange;
     display: flex;
     background-color: lightgoldenrodyellow;
-    width: 98%;
-    padding:1%;
+    width: 95%;
+    padding: 1%;
+    box-sizing: border-box;
+}
+
+.productData {
+    display: flex;
+    width: 95%;
 }
 
 h1 {
@@ -25,12 +34,13 @@ p{
 }
 
 
-#productDetail {
-
+.productReviews{
+    display: flex;
+    flex-direction: column;
 }
 
-#reviewDetail {
-
+.review {
+    padding: 10px;
 }
 
 .productImage {
@@ -44,9 +54,9 @@ p{
     transition: transform .2s;
 }
 
-.productImage.hover {
+.productImage:hover {
     transform-origin: 0% 40%;
-    transform: scale(1.75);
+    transform: scale(1.15);
 }
 
 .productInfo {
@@ -60,7 +70,7 @@ p{
     width: 60%;
 }
 
-#productName {
+.productName {
     border: 3px solid;
     background-color: rgb(245, 252, 243);
     display: flex;
@@ -68,7 +78,7 @@ p{
     padding: 20px;
     width: 60%;
 }
-#cartDescription {
+.cartDescription {
     border: 3px solid;
     background-color: rgb(245, 252, 243);
     display: flex;
@@ -79,13 +89,14 @@ p{
 
 .buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     transition-duration: 0.4s;
+    font-size: 0.2rem;
 }
 
 
-#button1 {
-    font-size: 20pt;
+.reviewButton {
+    /* font-size: 20pt; */
     /* align-items: left; */
     padding: 5%;
     border: 2px solid orangered;
@@ -93,13 +104,13 @@ p{
     background-color: slategrey;    
 }
 
-#button1:hover {
+.reviewButton:hover {
     background-color: orangered;
     color:white;
 }
 
-#button2 {
-    font-size: 20pt;
+.addToCartButton {
+    /* font-size: 20pt; */
     /* align-items: right;*/
     padding: 12px 28px;
     border: 2px solid orangered;
@@ -107,7 +118,7 @@ p{
     background-color: slategrey;    
 }
 
-#button2:hover {
+.addToCartButton:hover {
     background-color: orangered;
     color:white;
 }
