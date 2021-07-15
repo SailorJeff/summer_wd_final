@@ -1,0 +1,150 @@
+#container1 {
+    border: 5px solid yellow;
+    display: flex;
+    background-color: lightgoldenrodyellow;
+    width: 96%;
+    padding:2%;
+}
+#container2 {
+    border: 5px solid orange;
+    display: flex;
+    background-color: lightgoldenrodyellow;
+    width: 98%;
+    padding:1%;
+}
+
+h1 {
+    color:Black;
+}
+
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20pt;
+    color: black;
+    background-color: beige;
+}
+
+
+#productDetail {
+
+}
+
+#reviewDetail {
+
+}
+
+.productImage {
+    border: 3px solid blue;
+    background-color: rgb(249, 251, 252);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 40%;
+    height: 66%;
+    transition: transform .2s;
+}
+
+.productImage.hover {
+    transform-origin: 0% 40%;
+    transform: scale(1.75);
+}
+
+.productInfo {
+    border: 3px solid green;
+    background-color: rgb(232, 252, 232);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 60%;
+}
+
+#productName {
+    border: 3px solid;
+    background-color: rgb(245, 252, 243);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 60%;
+}
+#cartDescription {
+    border: 3px solid;
+    background-color: rgb(245, 252, 243);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 60%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    transition-duration: 0.4s;
+}
+
+
+#button1 {
+    font-size: 20pt;
+    /* align-items: left; */
+    padding: 5%;
+    border: 2px solid orangered;
+    color: black;
+    background-color: slategrey;    
+}
+
+#button1:hover {
+    background-color: orangered;
+    color:white;
+}
+
+#button2 {
+    font-size: 20pt;
+    /* align-items: right;*/
+    padding: 12px 28px;
+    border: 2px solid orangered;
+    color: black;
+    background-color: slategrey;    
+}
+
+#button2:hover {
+    background-color: orangered;
+    color:white;
+}
+
+.modal {
+    display: block;
+    width: 80%;
+    height: 80%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.modal-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 20% auto;
+    margin-left: 20%;
+    background-color: cadetblue;
+}
+#close {
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+#prodName {
+    background-color: cadetblue;
+}
+#prodPrice {
+    background-color: cadetblue;
+}
+#cartQuantity {
+    background-color: cadetblue;
+}
+#totalPrice {
+    background-color: cadetblue;
+}
