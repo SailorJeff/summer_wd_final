@@ -1,3 +1,9 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .productContainer {
     border: 5px solid yellow;
     display: flex;
@@ -123,14 +129,10 @@ p{
     color:white;
 }
 
-.modal {
-    display: block;
+#modal {
     width: 80%;
+    min-width: 500px;
     height: 80%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    visibility: hidden;
 }
 
 .modal-content {
@@ -138,10 +140,17 @@ p{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 20% auto;
-    margin-left: 20%;
+    width: 100%;
     background-color: cadetblue;
+    border: 5px solid green;
+
 }
+
+.modal-content > * {
+    width: 100%;
+    text-align: center;
+}
+
 #close {
     font-size: x-large;
     font-weight: bolder;
@@ -158,4 +167,31 @@ p{
 }
 #totalPrice {
     background-color: cadetblue;
+}
+
+#modalSection{
+    position: sticky;
+    bottom: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    width: 95%;
+    min-width: 500px;
+}
+
+.modalProduct {
+    display: flex;
+    justify-content: space-around;
+    background: beige;
+}
+
+#cart {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    background-image: url("./images/box.jpg");
+    background-size: cover;
 }

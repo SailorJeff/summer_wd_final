@@ -1,29 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retail Page</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<div id="products"></div>
-
-
-<!--Cart Modal-->
-<section class = "addToCart">
-    <div class = "modal" id = "modal">
-        <div class = "modal-content">
-            <span id = "close" onclick="closeModal()">Click to Dismiss</span>
-            <h2>Cart Contents:</h2>
-            <img src="" alt="">
-            <p id = "prodName">Product Name:</p>
-            <p id = "prodPrice">Product Price:</p>
-            <p id = "cartQuantity">Quantity:</p>
-            <p id = "totalPrice">Total Price:</p>
-        </div>
-    </div>
-</section>
-</body>
-<script src="./script.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Retail Page</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div id="cart" onclick="openModal()"></div>
+        <div id="products"></div>
+        <section id = "modalSection"></section>
+    </body>
+    <script src="./script.js"></script>
 </html>

@@ -11,3 +11,8 @@
 ## Refactor 2
 
 1. Remove the product container from the HTML document and create it in JS, then insert it into the products div;
+
+## Refactor 3
+1. Fill out data model with all products
+2. Add functionality to show cart modal
+> Refactor 4 will add cart state functionality

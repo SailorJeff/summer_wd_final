@@ -2,6 +2,7 @@
 // an array with one product in it
 products = [
     {
+        id: 1,
         name: "Awesome Sauce",
         description: "Produced by Team Saucesome",
         price: 49.29,
@@ -11,27 +12,111 @@ products = [
             "Illo, unde. Quia, dolorum. Qui nobis repellendus blanditiis ex totam inventore maxime. Sed corporis enim similique reprehenderit modi maiores mollitia, minus iste.Lorem ipsum dolor sit amet consectetur adipisicing elit. "
         ]
 
-    }
+    },
+    {
+        id: 2,
+        name: "Beach Sauce",
+        description: "Add a little fun to your beach trip",
+        price: 38.99,
+        imgUrl: "./images/MalibuRum.png",
+        reviews: [
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, unde. Quia, dolorum. Qui nobis repellendus blanditiis ex totam inventore maxime. Sed corporis enim similique reprehenderit modi maiores mollitia, minus iste.",
+            "Illo, unde. Quia, dolorum. Qui nobis repellendus blanditiis ex totam inventore maxime. Sed corporis enim similique reprehenderit modi maiores mollitia, minus iste.Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        ]
+
+    },
+    {
+        id: 3,
+        name: "Texan Juice",
+        description: "Texans hate Russions so they made their own vodka",
+        price: 45.89,
+        imgUrl: "./images/TitosVodka.jpg",
+        reviews: [
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, unde. Quia, dolorum. Qui nobis repellendus blanditiis ex totam inventore maxime. Sed corporis enim similique reprehenderit modi maiores mollitia, minus iste.",
+            "Illo, unde. Quia, dolorum. Qui nobis repellendus blanditiis ex totam inventore maxime. Sed corporis enim similique reprehenderit modi maiores mollitia, minus iste.Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        ]
+
+    },
+    {
+        id: 4,
+        name: "Snow Sauce",
+        description: "Russions dont give a ...",
+        price: 69.99,
+        imgUrl: "./images/RussianStandardVodka.jpg",
+        reviews: [
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, unde. Quia, dolorum. Qui nobis repellendus blanditiis ex totam inventore maxime. Sed corporis enim similique reprehenderit modi maiores mollitia, minus iste.",
+            "Illo, unde. Quia, dolorum. Qui nobis repellendus blanditiis ex totam inventore maxime. Sed corporis enim similique reprehenderit modi maiores mollitia, minus iste.Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        ]
+
+    },
 ]
 
+const cart = {}
+
 function openModal() {
-    console.log("This has been clicked");
-    var modal = document.getElementById("modal");
-    
-    modal.style.visibility = "visible";
+    // Create modal and add to modalSection
+    const modal = document.createElement("div")
+    modal.id = "modal"
+    document.getElementById("modalSection").appendChild(modal)
+
+    // Create modal-content and add to modal
+    const modalContent = document.createElement("div")
+    modalContent.className = "modal-content"
+    modal.appendChild(modalContent)
+
+    // Create dismiss span and add to modal-content
+    const dismissSpan = document.createElement("span")
+    dismissSpan.id = "close"
+    dismissSpan.innerHTML = "Click to Dismiss"
+    dismissSpan.onclick = closeModal
+    modalContent.appendChild(dismissSpan)
+
+    // Create modalHeader and append to modal-content
+    const modalHeader = document.createElement("h2")
+    modalHeader.innerHTML = "Cart Contents"
+    modalContent.appendChild(modalHeader)
+
+    // Add Each Item in Cart to modal
+    Object.keys(cart).forEach(productName => {
+        const modalProduct = document.createElement("div")
+        modalProduct.className = "modalProduct"
+        const product = cart[productName]
+
+        const productNameElement = document.createElement("p")
+        const productUnitPriceElement = document.createElement("p")
+        const productTotalPriceElement = document.createElement("p")
+        const productQuantityElement = document.createElement("p")
+
+        productNameElement.innerHTML = productName
+        productUnitPriceElement.innerHTML = `Unit: ${product.unitPrice}`
+        productQuantityElement.innerHTML = `Quantity: ${product.quantity}`
+        productTotalPriceElement.innerHTML = `Total: ${product.unitPrice * product.quantity}`
+
+        modalProduct.appendChild(productNameElement)
+        modalProduct.appendChild(productUnitPriceElement)
+        modalProduct.appendChild(productQuantityElement)
+        modalProduct.appendChild(productTotalPriceElement)
+
+        modalContent.append(modalProduct)
+    })
+
 
 }
 
 function closeModal() {
-    var modal = document.getElementById("modal");
-    
-    modal.style.visibility = "hidden";
+    const modal = document.getElementById("modal");
+    document.getElementById("modalSection").removeChild(modal)
 }
 
-function addToCart() {
-    console.log("This has been clicked as well");
-    openModal()
-    var modal = document.getElementById('modal');
+function addToCart(product) {
+    if(cart[product.name]){
+        cart[product.name]["quantity"] += 1
+    } else {
+        cart[product.name] = {
+            quantity: 1,
+            unitPrice: product.price
+        }
+    }
 }
 
 /**
@@ -103,6 +188,7 @@ function createProduct(product) {
     const addToCartButton = document.createElement("button")
     addToCartButton.className = "addToCartButton"
     addToCartButton.innerHTML = "Add to Cart"
+    addToCartButton.onclick = () => addToCart(product)
 
     buttonsContainer.appendChild(reviewButton)
     buttonsContainer.appendChild(document.createElement("br"))
