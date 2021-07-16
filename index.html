@@ -1,77 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retail Page</title>
+
+    <!-- link to CSS file -->
     <link rel="stylesheet" href="./style.css">
 </head>
 <div>
-    <div id = "container1">
-        <div class = "productImage" id = "productPhoto">
-            <div class = "mainImage">
+
+    <!-- Image & Info container -->
+    <div id="container1">                                
+        <div class="productImage" id="productPhoto">
+            <div class="mainImage">
                 <img src="./images/AbsolutVodka.png" alt="image of Absolut Vodka">
             </div>
         </div>
-        <div class = "productInfo"> <!--id = "productTitle"-->
-            <input name = "shoppingCart" id = "shoppingCart" type = "image"
-                src="./images/red-shopping-cart.png"
-                alt="Shopping Cart"
-                onclick="addToCart();"
-                tabindex="8"  />
-            <div id = "productDescription">
-                <div class = "productTitle">
-                    <p id = productTitle>Awesome Sauce</p>
-                    <!-- awesome sauce (black) box --> 
+        <div class="productInfo">
+            <!--id = "productTitle"-->
+            <img name="shoppingCart" id="shoppingCart" src="./images/shopping_cart.png.crdownload" alt="Shopping Cart"
+                onclick="addToCart()" tabindex="8" />
+            <div id="productDescription">
+                <div class="productTitle">
+                    <p id=productTitle>Awesome Sauce</p>
+                    <!-- awesome sauce (black) box -->
                 </div>
-                <div class = "productMfr">
-                    <p id = "productMfr">Produced by Team Absolut-ly Saucesome</p>
+                <div class="productMfr">
+                    <p id="productMfr">Produced by Team Absolut-ly Saucesome</p>
                 </div>
-                <div class = "productPrice">
-                    <p id = "productPrice">$49.29</p>
+                <div class="productPrice">
+                    <p id="productPrice">$49.29</p>
                 </div>
             </div>
             <br>
-            <div id = "cartDescription">
-                <div class = "buttons">
-                    <button id = "button1" onclick = "document.getElementById('reviewDetail').scrollIntoView();">Review/Comments</button>
+            <div id="cartDescription">
+                <div class="buttons">
+                    <button id="button1"
+                        onclick="document.getElementById('reviewDetail').scrollIntoView();">Review/Comments</button>
                     <br>
-                    <button id = "button2" onclick = "addToCart()";>Add to Cart</button>
-                    <!-- comments and cart (red) box --> 
+                    <button id="button2" onclick="addToCart()";>Add to Cart</button>
+                    <!-- comments and cart (red) box -->
                 </div>
             </div>
         </div>
     </div>
-    <div id = "container2">
-        <div class = "reviewContainer" id = "reviewDetail">
+
+    <!-- Review Container -->
+    <div id="container2">                                   
+        <div class="reviewContainer" id="reviewDetail">
             <h1>Customer Reviews:</h1>
-                <p id = "reviewOne">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, unde. Quia, dolorum. Qui nobis repellendus blanditiis ex totam inventore maxime. Sed corporis enim similique reprehenderit modi maiores mollitia, minus iste.</p>
-                <br>
-                <p id = "reviewTwo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel delectus nihil tenetur. Voluptas vitae sed, mollitia voluptatibus iusto quod tempore expedita commodi harum ea fugit, repellendus laboriosam amet! Natus, libero!</p>
+            <p id="reviewOne">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, unde. Quia, dolorum. Qui
+                nobis repellendus blanditiis ex totam inventore maxime. Sed corporis enim similique reprehenderit modi
+                maiores mollitia, minus iste.</p>
+            <br>
+            <p id="reviewTwo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel delectus nihil tenetur.
+                Voluptas vitae sed, mollitia voluptatibus iusto quod tempore expedita commodi harum ea fugit,
+                repellendus laboriosam amet! Natus, libero!</p>
         </div>
     </div>
-    <div id = "container3">
+
+    <!-- Next Page Button Container -->
+    <div id="container3"> 
         <form action="./product.html">
-            <input type="submit" value = "Similar Items">
-        </form>        
+            <input type="submit" value="Similar Items">
+        </form>
     </div>
+
     <!--Cart Modal-->
-    <section class = "addToCart">
-        <div class = "modal" id = "modal">
-            <div class = "modal-content">
-                <span id = "close" onclick="closeModal()">Click to Dismiss</span>
+    <section class="addToCart">
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span id="close" onclick="closeModal()">Click to Dismiss</span>
                 <h2>Cart Contents:</h2>
-                    <img src="" alt="">
-                    <p id = "productTitle">Product Title:</p>
-                    <p id = "productPrice">Product Price:</p>
-                    <p id = "cartQuantity">Quantity:</p>
-                    <p id = "totalPrice">Total Price:</p>
-
+                <img src="" alt="">
+                <p id="productTitle">Product Title:</p>
+                <p id="productPrice">Product Price:</p>
+                <p id="cartQuantity">Quantity:</p>
+                <p id="totalPrice">Total Price:</p>
             </div>
-
         </div>
     </section>
-</body>
-<script src="./script.js"></script>
+    </body>
+
+    <!-- link to call JavaScript actions -->
+    <script src="./script.js"></script> 
+
 </html>

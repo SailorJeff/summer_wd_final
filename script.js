@@ -1,5 +1,6 @@
 var shoppingCart = [];
 
+// To open the cart, add items to it and open the modal where the cart rests
 function addToCart(title, price) {
     console.log("This has been clicked as well");
     openModal()
@@ -11,6 +12,7 @@ function addToCart(title, price) {
     displayShoppingCart();
 }
 
+// to display information within the cart
 function displayShoppingCart() {
     var totalPrice = 0;
     var displayTitle = document.getElementById("displayTitle");
@@ -21,9 +23,12 @@ function displayShoppingCart() {
     }
 }
 
-var item1 = document.getElementById("item1");
-item1.addEventListener("click", addToCart("Awesome Sauce",'$49.29'));
+// additional part of displaying info in the cart
+var item1 = document.getElementById("displayTitle");
+displayTitle.addEventListener("click", addToCart("Awesome Sauce"));
+displayPrice.addEventListener("click", addToCart("$49.29"));
 
+// to open the modal and make it visible
 function openModal() {
     console.log("This has been clicked");
     var modal = document.getElementById("modal");
@@ -32,6 +37,7 @@ function openModal() {
 
 }
 
+// to close the modal and hide it
 function closeModal() {
     var modal = document.getElementById("modal");
     
